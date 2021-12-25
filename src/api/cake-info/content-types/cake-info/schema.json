@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cake_infos",
+  "info": {
+    "singularName": "cake-info",
+    "pluralName": "cake-infos",
+    "displayName": "Cake_info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "descriere": {
+      "type": "richtext"
+    },
+    "ingrediente": {
+      "type": "richtext"
+    },
+    "Prajitura": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cake.cake",
+      "inversedBy": "cake_info"
+    }
+  }
+}

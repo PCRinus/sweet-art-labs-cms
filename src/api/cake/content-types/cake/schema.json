@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cakes",
+  "info": {
+    "singularName": "cake",
+    "pluralName": "cakes",
+    "displayName": "Cake",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nume": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "pret": {
+      "type": "float",
+      "required": true
+    },
+    "poza": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "unitate_masura": {
+      "type": "enumeration",
+      "enum": [
+        "bucata",
+        "kilogram"
+      ],
+      "required": true
+    },
+    "cake_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cake-info.cake-info",
+      "inversedBy": "Prajitura"
+    },
+    "allergens": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::allergen.allergen",
+      "mappedBy": "Prajituri"
+    }
+  }
+}

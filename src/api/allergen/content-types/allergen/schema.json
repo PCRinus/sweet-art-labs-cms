@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allergens",
+  "info": {
+    "singularName": "allergen",
+    "pluralName": "allergens",
+    "displayName": "Allergen",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nume_categorie": {
+      "type": "string"
+    },
+    "Prajituri": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cake.cake",
+      "inversedBy": "allergens"
+    }
+  }
+}
