@@ -4,52 +4,76 @@
   "info": {
     "singularName": "cake",
     "pluralName": "cakes",
-    "displayName": "Cake",
+    "displayName": "cake",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "nume": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "string",
       "required": true,
       "unique": true
     },
-    "pret": {
-      "type": "float",
+    "price": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "decimal",
       "required": true
     },
-    "poza": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
-    "unitate_masura": {
+    "unit": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "enumeration",
       "enum": [
-        "bucata",
-        "kilogram"
+        "kilogram",
+        "piece"
       ],
       "required": true
-    },
-    "cake_info": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cake-info.cake-info",
-      "inversedBy": "Prajitura"
     },
     "allergens": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::allergen.allergen",
-      "mappedBy": "Prajituri"
+      "inversedBy": "cakes"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "cake_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cake-info.cake-info",
+      "inversedBy": "cake"
     }
   }
 }

@@ -4,22 +4,38 @@
   "info": {
     "singularName": "allergen",
     "pluralName": "allergens",
-    "displayName": "Allergen",
-    "description": ""
+    "displayName": "allergen"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "nume_categorie": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "string"
     },
-    "Prajituri": {
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "cakes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::cake.cake",
-      "inversedBy": "allergens"
+      "mappedBy": "allergens"
     }
   }
 }

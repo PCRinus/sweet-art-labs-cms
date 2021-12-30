@@ -4,21 +4,44 @@
   "info": {
     "singularName": "cake-info",
     "pluralName": "cake-infos",
-    "displayName": "Cake_info",
-    "description": ""
+    "displayName": "cake_info"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "descriere": {
+    "cake_name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "cake_description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    },
+    "cake_ingredients": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "richtext"
     },
-    "ingrediente": {
-      "type": "richtext"
-    },
-    "Prajitura": {
+    "cake": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cake.cake",
