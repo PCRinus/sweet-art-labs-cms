@@ -74,6 +74,12 @@
       "relation": "oneToOne",
       "target": "api::cake-info.cake-info",
       "inversedBy": "cake"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "cakes"
     }
   }
 }
