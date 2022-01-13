@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  adress controller
+ *  address controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::adress.adress');
+module.exports = createCoreController('api::address.address');

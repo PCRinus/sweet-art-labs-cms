@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "adresses",
+  "collectionName": "addresses",
   "info": {
-    "singularName": "adress",
-    "pluralName": "adresses",
-    "displayName": "address",
-    "description": ""
+    "singularName": "address",
+    "pluralName": "addresses",
+    "displayName": "address"
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +15,7 @@
     }
   },
   "attributes": {
-    "adress": {
+    "address": {
       "pluginOptions": {
         "i18n": {
           "localized": true
