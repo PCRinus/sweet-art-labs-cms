@@ -73,7 +73,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cake-info.cake-info",
-      "inversedBy": "cake"
+      "mappedBy": "cake"
     },
     "categories": {
       "type": "relation",
