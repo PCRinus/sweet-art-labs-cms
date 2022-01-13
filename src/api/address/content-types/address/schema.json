@@ -4,7 +4,8 @@
   "info": {
     "singularName": "address",
     "pluralName": "addresses",
-    "displayName": "address"
+    "displayName": "address",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,15 +25,6 @@
       "type": "string",
       "required": true
     },
-    "phone": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "required": true
-    },
     "hours": {
       "pluginOptions": {
         "i18n": {
@@ -40,6 +32,15 @@
         }
       },
       "type": "text",
+      "required": true
+    },
+    "phone": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
       "required": true
     }
   }
